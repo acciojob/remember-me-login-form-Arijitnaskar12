@@ -8,7 +8,7 @@ let button=document.getElementById("Existing");
 if(arr!=null)
 {
 	button.style.display="block";
-	let data=localStorage.getItem("userDetails");
+	let data=JSON.parse(localStorage.getItem("userDetails"));
 	button.addEventListener("click",()=>{
 	alert("Logged in as"+" "+data.userName);
 	});
@@ -24,6 +24,6 @@ submitButton.addEventListener("click",(event)=>{
 if(checkBox.checked)
 {
 	localStorage.setItem("userDetails",JSON.stringify(obj));
-}e
+}
  alert("Logged in as"+" "+obj.userName);
 });
